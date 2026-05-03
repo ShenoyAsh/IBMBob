@@ -1,0 +1,11 @@
+/init
+
+I'm building a "Developer Workflow Accelerator" that helps developers:
+1. Understand existing codebases quickly
+2. Generate documentation automatically  
+3. Create unit tests
+
+Tech stack: Python
+Target: CLI tool with modular design
+
+Please create the project structure and AGENTS.md file.

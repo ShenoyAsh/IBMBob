@@ -1,0 +1,11 @@
+Switch to Plan mode.
+
+Based on our project context, create a detailed architecture plan for:
+
+1. CodeAnalyzer module - analyzes Python files, extracts functions, classes, dependencies
+2. DocGenerator module - creates README and docstrings
+3. TestGenerator module - generates pytest unit tests
+4. CLI interface to tie everything together
+
+Provide the file structure, module responsibilities, and implementation approach.
+DO NOT write code yet - just the plan.
