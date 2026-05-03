@@ -1,6 +1,6 @@
-# data_manager
+# sample_calculator
 
-A module for managing JSON data files.
+A simple calculator module for demonstration purposes.
 
 ## Table of Contents
 
@@ -12,21 +12,29 @@ A module for managing JSON data files.
 
 ## Overview
 
-This module contains 1 classes and 1 functions.
+This module contains 1 classes and 3 functions.
 
 ## Classes
 
-### DataManager
+### Calculator
 
-Handles loading and saving of structured data.
+Basic calculator with arithmetic operations.
 
-**Methods:** 3
+**Methods:** 8
 
 ## Functions
 
-### process_records
+### calculate_average
 
-Extract a specific key from a list of records.
+Calculate average of a list of numbers.
+
+### find_max
+
+Find maximum value in a list.
+
+### find_min
+
+Find minimum value in a list.
 
 ## Installation
 
@@ -37,7 +45,7 @@ pip install -r requirements.txt
 ## Usage
 
 ```python
-from module import DataManager
+from module import Calculator
 
-obj = DataManager()
+obj = Calculator()
 ```

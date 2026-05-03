@@ -219,8 +219,8 @@ class TestGenerator:
         
         # Generate sample call based on arguments
         args = method_data.get("args", [])
-        if args and args[0]["name"] != "self":
-            arg_names = [arg["name"] for arg in args if arg["name"] != "self"]
+        other_args = [arg for arg in args if arg["name"] != "self"]
+        if other_args:
             sample_args = self._generate_sample_args(args)
             sections.append(f"{self.indent * 2}# TODO: Replace with actual test values")
             sections.append(f"{self.indent * 2}result = obj.{method_name}({sample_args})")
@@ -319,20 +319,21 @@ class TestGenerator:
             if arg["name"] == "self":
                 continue
             
-            annotation = arg.get("annotation", "")
+            annotation = arg.get("annotation") or ""
+            annotation_lower = annotation.lower()
             
             # Generate sample based on type annotation
-            if "str" in annotation.lower():
+            if "str" in annotation_lower:
                 sample_values.append(f'"{arg["name"]}_value"')
-            elif "int" in annotation.lower():
+            elif "int" in annotation_lower:
                 sample_values.append("42")
-            elif "float" in annotation.lower():
+            elif "float" in annotation_lower:
                 sample_values.append("3.14")
-            elif "bool" in annotation.lower():
+            elif "bool" in annotation_lower:
                 sample_values.append("True")
-            elif "list" in annotation.lower():
+            elif "list" in annotation_lower:
                 sample_values.append("[]")
-            elif "dict" in annotation.lower():
+            elif "dict" in annotation_lower:
                 sample_values.append("{}")
             else:
                 sample_values.append("None")
