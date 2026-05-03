@@ -1,6 +1,6 @@
-# sample_calculator
+# code_analyzer
 
-A simple calculator module for demonstration purposes.
+Code analyzer module for parsing Python source files using AST.
 
 ## Table of Contents
 
@@ -12,29 +12,18 @@ A simple calculator module for demonstration purposes.
 
 ## Overview
 
-This module contains 1 classes and 3 functions.
+This module contains 1 classes and 0 functions.
 
 ## Classes
 
-### Calculator
+### CodeAnalyzer
 
-Basic calculator with arithmetic operations.
+Analyzes Python source code and extracts structural information.
 
-**Methods:** 8
+This class uses Python's Abstract Syntax Tree (AST) to parse source files
+and extract functions, classes, imports, and docstrings.
 
-## Functions
-
-### calculate_average
-
-Calculate average of a list of numbers.
-
-### find_max
-
-Find maximum value in a list.
-
-### find_min
-
-Find minimum value in a list.
+**Methods:** 17
 
 ## Installation
 
@@ -45,7 +34,7 @@ pip install -r requirements.txt
 ## Usage
 
 ```python
-from module import Calculator
+from module import CodeAnalyzer
 
-obj = Calculator()
+obj = CodeAnalyzer()
 ```
